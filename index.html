@@ -1,20 +1,360 @@
-<h1>HOLA MUNDIRIJILLO</h1>
-<br>
-<img src="FOTO.jpeg" width="200"> 
-<br>
-<table border="1"> 
-    <tr>
-        <th>APELLIDO</th>
-        <th>NOMBRES</th>
-        <th>DIRECCION</th>
-        <th>ACERCA DE MI</th>
-    </tr>
-    <tr>
-        <td>CANGUI</td>
-        <td>EDISON</td>
-        <td>VIA. AL KARTIN CLUB</td>
-        <td>ME GUSTA JUGAR BASQUET</td>
-    </tr>
-</table>
-<h2>Mi NOMBRE ES : Edison Cangui<h2>
-<h3>Mi Email Es : edison.cagui1452@utc.edu.ec
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aprende qué es la arquitectura monolítica, cómo funciona y cómo se compara con los microservicios.">
+    <meta name="theme-color" content="#090710">
+    <title>Arquitectura Monolítica | Aprende desarrollo de software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-navbar" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand brand-mark" href="#inicio" aria-label="Arquitectura monolítica, inicio">
+                <span class="brand-icon" aria-hidden="true">M</span>
+                <span>Mono<span class="text-gradient">lítica</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#que-es">¿Qué es?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#caracteristicas">Características</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ventajas">Ventajas y desventajas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ejemplo">Ejemplo práctico</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#comparacion">Comparación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video">Video educativo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#autor">Autor</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="contenido">
+        <section class="hero-section section-anchor" id="inicio" aria-labelledby="titulo-principal">
+            <div class="hero-orb hero-orb-purple" aria-hidden="true"></div>
+            <div class="hero-orb hero-orb-blue" aria-hidden="true"></div>
+            <div class="container position-relative">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <span class="eyebrow"><span class="eyebrow-dot"></span> FUNDAMENTOS DE SOFTWARE</span>
+                        <h1 id="titulo-principal" class="hero-title mt-4">
+                            Descubre la<br>
+                            Arquitectura <span class="text-gradient">Monolítica</span>
+                        </h1>
+                        <p class="hero-copy mt-4">
+                            Una forma directa de construir aplicaciones donde sus piezas trabajan juntas.
+                            Explora cómo se organiza, sus beneficios y los retos que presenta al crecer.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a class="btn btn-gradient" href="#que-es">Explorar contenido <span aria-hidden="true">→</span></a>
+                            <a class="btn btn-glass" href="#quiz">Realizar el quiz</a>
+                        </div>
+                        <div class="hero-note mt-4"><span aria-hidden="true">✦</span> Conceptos claros, ejemplos prácticos</div>
+                    </div>
+                    <div class="col-lg-5">
+                        <!-- Diagrama ilustrativo: los módulos forman parte de una sola aplicación. -->
+                        <div class="hero-diagram glass-card" role="img" aria-label="Diagrama de una aplicación monolítica con interfaz, lógica de negocio y datos dentro de una misma unidad">
+                            <div class="diagram-topline"><span></span><span></span><span></span><span class="diagram-label">UNA SOLA APLICACIÓN</span></div>
+                            <div class="diagram-app">
+                                <div class="diagram-app-title"><span class="diagram-cube" aria-hidden="true">▧</span> Aplicación</div>
+                                <div class="diagram-module"><span class="module-icon module-purple" aria-hidden="true">▣</span><span>Interfaz</span><span class="module-status">Módulo</span></div>
+                                <div class="diagram-module"><span class="module-icon module-blue" aria-hidden="true">⌘</span><span>Lógica de negocio</span><span class="module-status">Módulo</span></div>
+                                <div class="diagram-module"><span class="module-icon module-pink" aria-hidden="true">▤</span><span>Acceso a datos</span><span class="module-status">Módulo</span></div>
+                                <div class="diagram-deploy"><span class="deploy-line"></span><span aria-hidden="true">↗</span> Se despliega como una unidad</div>
+                            </div>
+                            <span class="diagram-spark spark-one" aria-hidden="true">✦</span>
+                            <span class="diagram-spark spark-two" aria-hidden="true">✧</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section-anchor" id="que-es" aria-labelledby="titulo-que-es">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">01 · CONCEPTO</span>
+                    <h2 id="titulo-que-es">¿Qué es la arquitectura <span class="text-gradient">monolítica</span>?</h2>
+                    <p>Una aplicación monolítica se construye y se ejecuta como una sola unidad, aunque por dentro tenga varios módulos.</p>
+                </div>
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-7">
+                        <article class="glass-card explanation-card h-100">
+                            <div class="card-icon icon-purple" aria-hidden="true">◈</div>
+                            <h3>Un solo sistema, varias responsabilidades</h3>
+                            <p>En una arquitectura monolítica, la interfaz, las reglas del negocio y el acceso a los datos suelen vivir en la misma aplicación. Sus módulos pueden estar separados en el código, pero se compilan, publican y escalan juntos.</p>
+                            <p class="mb-0">Esto no significa que el código deba ser desordenado: una estructura modular ayuda a entender y mantener el sistema.</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-5">
+                        <article class="glass-card analogy-card h-100">
+                            <span class="analogy-label">EJEMPLO COTIDIANO</span>
+                            <h3>Como una casa con varias habitaciones</h3>
+                            <p>La cocina, el dormitorio y la sala tienen funciones distintas, pero forman parte de la misma casa. Si se cambia de vivienda, se traslada el conjunto.</p>
+                            <div class="analogy-rooms" aria-label="Habitaciones conectadas dentro de una misma casa">
+                                <span>COCINA</span><span>SALA</span><span>DORMITORIO</span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section-anchor section-tint" id="caracteristicas" aria-labelledby="titulo-caracteristicas">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">02 · ESTRUCTURA</span>
+                    <h2 id="titulo-caracteristicas">Características <span class="text-gradient">principales</span></h2>
+                    <p>Estas propiedades describen cómo se organiza y entrega una aplicación monolítica.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-sm-6 col-xl-3">
+                        <article class="glass-card feature-card h-100">
+                            <div class="card-icon icon-purple" aria-hidden="true">▦</div>
+                            <h3>Aplicación integrada</h3>
+                            <p>Las funciones principales conviven dentro de una aplicación coordinada.</p>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <article class="glass-card feature-card h-100">
+                            <div class="card-icon icon-blue" aria-hidden="true">⬆</div>
+                            <h3>Despliegue unificado</h3>
+                            <p>Los cambios se publican como una nueva versión del sistema completo.</p>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <article class="glass-card feature-card h-100">
+                            <div class="card-icon icon-pink" aria-hidden="true">⌘</div>
+                            <h3>Módulos relacionados</h3>
+                            <p>Los módulos colaboran mediante llamadas internas y comparten el mismo contexto.</p>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-xl-3">
+                        <article class="glass-card feature-card h-100">
+                            <div class="card-icon icon-cyan" aria-hidden="true">✦</div>
+                            <h3>Inicio sencillo</h3>
+                            <p>Un solo proyecto y despliegue facilitan comenzar con un producto pequeño.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section-anchor" id="ventajas" aria-labelledby="titulo-ventajas">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">03 · BALANCE</span>
+                    <h2 id="titulo-ventajas">Ventajas y <span class="text-gradient">desventajas</span></h2>
+                    <p>La mejor elección depende del tamaño del producto, del equipo y de sus necesidades.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6">
+                        <article class="glass-card pros-card h-100">
+                            <div class="pros-heading"><span class="pro-con-icon" aria-hidden="true">+</span><h3>Ventajas</h3></div>
+                            <ul class="benefit-list">
+                                <li><span aria-hidden="true">✓</span><div><strong>Desarrollo inicial directo</strong><p>Un proyecto central puede reducir la configuración necesaria para empezar.</p></div></li>
+                                <li><span aria-hidden="true">✓</span><div><strong>Depuración más sencilla</strong><p>Es posible seguir el flujo de ejecución dentro de una misma aplicación.</p></div></li>
+                                <li><span aria-hidden="true">✓</span><div><strong>Comunicación interna rápida</strong><p>Los módulos pueden comunicarse sin llamadas de red entre servicios.</p></div></li>
+                                <li><span aria-hidden="true">✓</span><div><strong>Operación inicial simple</strong><p>Un artefacto y un proceso de despliegue pueden bastar al comienzo.</p></div></li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-lg-6">
+                        <article class="glass-card cons-card h-100">
+                            <div class="cons-heading"><span class="pro-con-icon" aria-hidden="true">−</span><h3>Desventajas</h3></div>
+                            <ul class="benefit-list">
+                                <li><span aria-hidden="true">!</span><div><strong>Despliegue de todo el sistema</strong><p>Una modificación puede requerir publicar de nuevo la aplicación completa.</p></div></li>
+                                <li><span aria-hidden="true">!</span><div><strong>Escalado menos selectivo</strong><p>Se suele escalar la aplicación entera, aunque solo una parte necesite más recursos.</p></div></li>
+                                <li><span aria-hidden="true">!</span><div><strong>Acoplamiento al crecer</strong><p>Las dependencias entre módulos pueden volver más difícil cambiar el sistema.</p></div></li>
+                                <li><span aria-hidden="true">!</span><div><strong>Mayor impacto de fallos</strong><p>Un problema grave en el proceso puede afectar a varias funcionalidades.</p></div></li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section-anchor section-tint" id="ejemplo" aria-labelledby="titulo-ejemplo">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">04 · APLICACIÓN</span>
+                    <h2 id="titulo-ejemplo">Ejemplo práctico: <span class="text-gradient">tienda en línea</span></h2>
+                    <p>Una misma aplicación puede coordinar los módulos de usuarios, productos, pedidos y pagos.</p>
+                </div>
+                <!-- Diagrama en CSS: en pantallas pequeñas los módulos se apilan para facilitar la lectura. -->
+                <div class="glass-card shop-diagram" role="img" aria-label="Diagrama de tienda en línea: los módulos de usuarios, productos, pedidos y pagos se conectan con una aplicación monolítica">
+                    <div class="shop-core">
+                        <span class="shop-core-icon" aria-hidden="true">▧</span>
+                        <div><strong>Aplicación de tienda</strong><span>Una unidad desplegable</span></div>
+                    </div>
+                    <div class="shop-connectors" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+                    <div class="shop-modules">
+                        <div class="shop-module"><span class="shop-module-icon module-purple" aria-hidden="true">♙</span><strong>Usuarios</strong><small>Perfiles y acceso</small></div>
+                        <div class="shop-module"><span class="shop-module-icon module-blue" aria-hidden="true">▤</span><strong>Productos</strong><small>Catálogo e inventario</small></div>
+                        <div class="shop-module"><span class="shop-module-icon module-pink" aria-hidden="true">▣</span><strong>Pedidos</strong><small>Carrito y compras</small></div>
+                        <div class="shop-module"><span class="shop-module-icon module-cyan" aria-hidden="true">◇</span><strong>Pagos</strong><small>Confirmación de pago</small></div>
+                    </div>
+                    <p class="diagram-caption"><span aria-hidden="true">↳</span> Los módulos colaboran dentro de la misma aplicación y se despliegan juntos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section-anchor" id="comparacion" aria-labelledby="titulo-comparacion">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">05 · OTRAS ARQUITECTURAS</span>
+                    <h2 id="titulo-comparacion">Monolito frente a <span class="text-gradient">microservicios</span></h2>
+                    <p>Los microservicios separan el sistema en servicios pequeños que pueden desplegarse de forma independiente.</p>
+                </div>
+                <div class="glass-card comparison-card">
+                    <div class="table-responsive">
+                        <table class="table comparison-table align-middle mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Aspecto</th>
+                                    <th scope="col"><span class="table-dot dot-purple"></span> Monolito</th>
+                                    <th scope="col"><span class="table-dot dot-blue"></span> Microservicios</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><th scope="row">Organización</th><td>Una aplicación con módulos internos.</td><td>Varios servicios independientes.</td></tr>
+                                <tr><th scope="row">Despliegue</th><td>La aplicación se publica como una unidad.</td><td>Cada servicio puede publicarse por separado.</td></tr>
+                                <tr><th scope="row">Escalabilidad</th><td>Se escala habitualmente el sistema completo.</td><td>Se pueden escalar servicios específicos.</td></tr>
+                                <tr><th scope="row">Complejidad</th><td>Menos complejidad operativa al comenzar.</td><td>Más infraestructura y coordinación distribuida.</td></tr>
+                                <tr><th scope="row">Mantenimiento</th><td>Puede ser sencillo al inicio; los módulos acoplados lo dificultan al crecer.</td><td>Se mantiene cada servicio, aunque hay más componentes.</td></tr>
+                                <tr><th scope="row">Comunicación</th><td>Llamadas internas dentro del proceso.</td><td>Comunicación entre servicios, a menudo por red.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p class="comparison-note"><span aria-hidden="true">✦</span> Ninguna arquitectura es siempre mejor: elige según las necesidades reales del proyecto.</p>
+            </div>
+        </section>
+
+        <section class="content-section section-anchor section-tint" id="video" aria-labelledby="titulo-video">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">06 · APRENDE EN VIDEO</span>
+                    <h2 id="titulo-video">Video <span class="text-gradient">educativo</span></h2>
+                    <p>Complementa lo aprendido con este video publicado en TikTok.</p>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <!-- Incrustación oficial de TikTok centrada con utilidades de Bootstrap. -->
+                    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@eedxfsil12/video/7698390405024337173" data-video-id="7698390405024337173">
+                        <section>
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@eedxfsil12/video/7698390405024337173">
+                                Ver video educativo en TikTok
+                            </a>
+                        </section>
+                    </blockquote>
+                </div>
+                <noscript><p class="text-center mt-3">Activa JavaScript para cargar la incrustación de TikTok.</p></noscript>
+            </div>
+            <script async src="https://www.tiktok.com/embed.js"></script>
+        </section>
+
+        <section class="content-section section-anchor" id="quiz" aria-labelledby="titulo-quiz">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">07 · PON A PRUEBA LO APRENDIDO</span>
+                    <h2 id="titulo-quiz">Quiz de arquitectura <span class="text-gradient">monolítica</span></h2>
+                    <p>Responde las cinco preguntas y revisa la explicación de cada respuesta.</p>
+                </div>
+                <form class="glass-card quiz-card" id="quizForm">
+                    <fieldset class="quiz-question">
+                        <legend><span class="question-number">01</span> ¿Qué describe mejor una arquitectura monolítica?</legend>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="pregunta1" value="a"><span>Una aplicación que se construye y despliega como una unidad.</span></label>
+                            <label class="quiz-option"><input type="radio" name="pregunta1" value="b"><span>Un conjunto de servicios que siempre se despliegan por separado.</span></label>
+                            <label class="quiz-option"><input type="radio" name="pregunta1" value="c"><span>Una aplicación que no puede tener módulos internos.</span></label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="quiz-question">
+                        <legend><span class="question-number">02</span> ¿Cuál es una característica habitual del monolito?</legend>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="pregunta2" value="a"><span>Cada módulo se ejecuta obligatoriamente en un servidor distinto.</span></label>
+                            <label class="quiz-option"><input type="radio" name="pregunta2" value="b"><span>La aplicación se despliega como una unidad, aunque tenga módulos.</span></label>
+                            <label class="quiz-option"><input type="radio" name="pregunta2" value="c"><span>Los módulos solo se comunican por internet.</span></label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="quiz-question">
+                        <legend><span class="question-number">03</span> ¿Qué ventaja puede ofrecer al inicio de un proyecto?</legend>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="pregunta3" value="a"><span>No requiere pruebas ni mantenimiento.</span></label>
+                            <label class="quiz-option"><input type="radio" name="pregunta3" value="b"><span>Permite escalar cada módulo de forma independiente.</span></label>
+                            <label class="quiz-option"><input type="radio" name="pregunta3" value="c"><span>Puede simplificar la configuración y el despliegue inicial.</span></label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="quiz-question">
+                        <legend><span class="question-number">04</span> ¿Qué reto puede aparecer cuando el monolito crece?</legend>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="pregunta4" value="a"><span>Es posible que los módulos acoplados dificulten los cambios.</span></label>
+                            <label class="quiz-option"><input type="radio" name="pregunta4" value="b"><span>La aplicación deja de poder ejecutarse en un servidor.</span></label>
+                            <label class="quiz-option"><input type="radio" name="pregunta4" value="c"><span>Ya no se puede desplegar el sistema.</span></label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="quiz-question">
+                        <legend><span class="question-number">05</span> ¿Qué distingue principalmente a los microservicios?</legend>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="pregunta5" value="a"><span>Son módulos internos que siempre comparten un único despliegue.</span></label>
+                            <label class="quiz-option"><input type="radio" name="pregunta5" value="b"><span>Son servicios que pueden desplegarse y escalarse de manera independiente.</span></label>
+                            <label class="quiz-option"><input type="radio" name="pregunta5" value="c"><span>No requieren comunicación entre componentes.</span></label>
+                        </div>
+                    </fieldset>
+                    <div class="quiz-actions">
+                        <button class="btn btn-gradient" type="submit">Comprobar respuestas</button>
+                        <button class="btn btn-glass" id="resetQuiz" type="button" hidden>Intentar de nuevo</button>
+                    </div>
+                    <div id="quizResult" class="quiz-result mt-4" role="status" aria-live="polite" tabindex="-1" hidden></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="content-section section-anchor section-tint author-section" id="autor" aria-labelledby="titulo-autor">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-kicker">08 · QUIÉN ESTÁ DETRÁS</span>
+                    <h2 id="titulo-autor">Sobre el <span class="text-gradient">autor</span></h2>
+                </div>
+                <article class="glass-card author-card">
+                    <img src="img/FOTO.jpeg" alt="Fotografía de Edison Cangui" class="author-photo">
+                    <div>
+                        <span class="author-label">ESTUDIANTE Y CREADOR</span>
+                        <h3>Edison Cangui</h3>
+                        <p><strong>Edad:</strong> 20 años</p>
+                        <p><strong>Carrera:</strong> Estudiante de Ingeniería / Desarrollo de Software</p>
+                    </div>
+                    <span class="author-decoration" aria-hidden="true">✦</span>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <div>
+                <a class="footer-brand" href="#inicio">Arquitectura Monolítica</a>
+                <p class="mb-0">Aprender arquitectura es construir mejores soluciones.</p>
+            </div>
+            <div class="footer-meta">
+                <span>© <span id="currentYear"></span> · Proyecto educativo</span>
+                <a href="#inicio">Volver arriba ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
